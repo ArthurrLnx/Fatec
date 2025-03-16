@@ -1,0 +1,26 @@
+input, textarea{
+    font:len sans-serif;
+    width: 300px;
+    box-sizing: border-box;
+    border: 2px solid #626262;
+    border-radius: 8px;
+}
+
+input:focus, textarea:focus{
+    border-color: #000;
+}
+
+textarea {
+    vertical-align: top;
+    height: 5em;
+}
+
+.button {
+    padding-left: 90px;
+}
+
+button {
+    margin-left: 0.02em;
+    background-color: darkgrey;
+}
+
