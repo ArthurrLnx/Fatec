@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LISTA DE CATEGORIAS</title>
+</head>
+<body>
+<h2 style="text-align: center;">LISTA DE CATEGORIAS</h2>
+<hr>
+
+<a href="{{url_for('categorias_func')}}" class="btn btn-secondary">Adicionar Categoria</a>
+<br><br>
+<table class="table table-bordered table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nome</th>
+        </tr>
+</thead>
+<tbody>
+    {% for item in categorias %}
+        <tr>
+            <td>{{item[0]}}</td>
+
+            </td>
+            <td>{{item[1]}}</td>
+            <td>
+                <a href="{{item[0]}}/editar_categoria" class="btn btn-secondary btn-xs"> Editar</a>
+                <a href="{{item[0]}}/remove_categoria" onclick="return confirm('Deseja excluir esse registro?')" class="btn btn-danger btn-xs">Excluir</a>
+            </td>
+
+        </tr>
+    {% endfor %}
+
+    <tbody>
+</table>
+<body>
+</html>
